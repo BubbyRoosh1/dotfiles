@@ -1,0 +1,10 @@
+#!/bin/sh
+
+input="$HOME/.config/bubby/aliases"
+
+while IFS= read -r line
+do
+  al=$(echo "$line" | awk '{print $1}')
+  an=$(echo "$line" | awk '{print $2}')
+  alias "$al=\"$an\""
+done < "$input"
