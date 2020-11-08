@@ -32,10 +32,10 @@ alias vim=nvim
 #echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 # Paths
-export PATH=/home/bubbyroosh/.local/share:$PATH
-export PATH=/home/bubbyroosh/.local/bin:$PATH
-export PATH=/home/bubbyroosh/.local/scripts:$PATH
-export PATH=/home/bubbyroosh/.cargo/bin:$PATH
+export PATH=$HOME/.local/share:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/scripts:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
