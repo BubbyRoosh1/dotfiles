@@ -7,6 +7,7 @@ set wildmenu
 filetype off
 
 set t_Co=256
+set termguicolors
 set background=dark
 
 call plug#begin()
@@ -17,14 +18,17 @@ Plug 'justinmk/vim-sneak'
 Plug 'vim-airline/vim-airline'
 Plug 'udalov/kotlin-vim'
 Plug 'rust-lang/rust.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'wellle/context.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'shapeoflambda/dark-purple.vim'
 call plug#end()
 
-inoremap <C-s> s
-vnoremap <C-s> s
-nnoremap <C-s> s
+let g:syntastic_rust_checkers = ['cargo']
 
-"highlight Normal ctermbg=NONE
-"highlight nonText ctermbg=NONE
+let g:context_enabled = 1
+
+colorscheme dark_purple
 
 let mapleader = " "
 set hlsearch
