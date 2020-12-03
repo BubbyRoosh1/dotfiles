@@ -1,3 +1,4 @@
+;mostly yoinked from distrotube's config. changed a bit so it doesn't look bad
 [global/wm]
 ;https://github.com/jaagr/polybar/wiki/Configuration#global-wm-settings
 margin-top = 0
