@@ -18,7 +18,6 @@ fi
 
 if [ -f "$userresources" ]; then
     xrdb -merge "$userresources"
-
 fi
 
 if [ -f "$usermodmap" ]; then
@@ -37,4 +36,4 @@ fi
 [ -f /etc/xprofile  ] && . /etc/xprofile
 [ -f ~/.xprofile  ] && . ~/.xprofile
 
-exec dwm
+exec bspwm

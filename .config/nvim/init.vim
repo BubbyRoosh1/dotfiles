@@ -16,6 +16,7 @@ Plug 'tpope/vim-surround'
 Plug 'justinmk/vim-sneak'
 Plug 'vim-airline/vim-airline'
 Plug 'udalov/kotlin-vim'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 inoremap <C-s> s
@@ -62,3 +63,4 @@ set ttyfast
 set laststatus=2
 
 set number relativenumber
+set clipboard=unnamedplus
