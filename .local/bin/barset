@@ -14,7 +14,7 @@ getpackages()
 
 getvolume()
 {
-  echo "Volume: $(pactl list sinks | grep front-left | awk 'FNR == 2 {print $5}')"
+  echo "Volume: $(amixer get Master | awk 'FNR == 5 {print $4}' | tr -d "[]")"
 }
 
 getpower()
@@ -31,7 +31,7 @@ getpower()
 
 hddspace()
 {
-  echo "Free space: $(df -m | grep /dev/sda3 | awk '{print $4}')"
+  echo "Free space: $(df -h | grep /dev/sda3 | awk '{print $4}')"
 }
 
 while true; do
