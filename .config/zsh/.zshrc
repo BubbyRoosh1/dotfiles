@@ -94,4 +94,4 @@ bindkey '^e' edit-command-line
 #startx &
 #fi
 
-source $HOME/.local/scripts/aliasmaker
+source $HOME/.local/bin/aliasmaker

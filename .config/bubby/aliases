@@ -1,5 +1,3 @@
-hm	$HOME/
-pk  $HOME/Projects/kotlin
-pj  $HOME/Projects/java
-pr  $HOME/Projects/rust
-dl  $HOME/Downloads
+hm $HOME
+pj $HOME/Projects/Java
+pc $HOME/Projects/C

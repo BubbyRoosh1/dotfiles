@@ -9,7 +9,7 @@ getdate()
 
 getpackages()
 {
-  echo "Packages: $(pacman -Q | wc -l)"
+  echo "Packages: $(apk info | wc -l)"
 }
 
 getvolume()
@@ -31,7 +31,7 @@ getpower()
 
 hddspace()
 {
-  echo "Free space: $(df --si | grep /dev/sda2 | awk '{print $4}')"
+  echo "Free space: $(df -m | grep /dev/sda3 | awk '{print $4}')"
 }
 
 while true; do

@@ -1,0 +1,17 @@
+!/bin/sh
+#super quality script would recommend it's literally the best thing ever there's never a chance of an error.. requires pywal
+
+wal -i "$1"
+
+rm $HOME/.local/src/dwm/colors-wal-dwm.h
+cp $HOME/.cache/wal/colors-wal-dwm.h $HOME/.local/src/dwm
+rm $HOME/.local/src/st/colors-wal-st.h
+cp $HOME/.cache/wal/colors-wal-st.h $HOME/.local/src/st
+
+cd $HOME/.local/src/dwm
+sed -i '/urg/d' ./colors-wal-dwm.h
+sudo make clean install
+cd $HOME/.local/src/st
+sudo make clean install
+
+notify-send 'Theme changed' 'Restart dwm to apply new colorscheme'

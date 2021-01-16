@@ -20,7 +20,7 @@ Plug 'udalov/kotlin-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-syntastic/syntastic'
 "Plug 'wellle/context.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'shapeoflambda/dark-purple.vim'
 Plug 'lambdalisue/fern.vim'
 call plug#end()
@@ -54,7 +54,7 @@ let g:syntastic_rust_checkers = ['cargo']
 
 let g:context_enabled = 1
 
-colorscheme dark_purple
+colorscheme pog
 
 let mapleader = " "
 set hlsearch
