@@ -20,10 +20,12 @@ Plug 'udalov/kotlin-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-syntastic/syntastic'
 "Plug 'wellle/context.vim'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'shapeoflambda/dark-purple.vim'
 Plug 'lambdalisue/fern.vim'
 call plug#end()
+
+let g:ale_linters = {'rust': ['analyzer']}
 
 let g:fern#drawer_width = 30
 let g:fern#default_hidden = 1
@@ -63,6 +65,8 @@ set ignorecase
 set smartcase
 set showmatch
 map <leader><space> :let @/=''<cr>
+
+nmap <leader>q  <Plug>(coc-fix-current)
 
 nnoremap \ :e ~/.config/nvim/init.vim
 nnoremap <leader>p :Explore<Enter>

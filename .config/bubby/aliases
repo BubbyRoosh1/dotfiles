@@ -1,3 +1,5 @@
 hm $HOME
 pj $HOME/Projects/Java
+pk $HOME/Projects/Kotlin
+pr $HOME/Projects/Rust
 pc $HOME/Projects/C

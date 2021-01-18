@@ -9,7 +9,7 @@ getdate()
 
 getpackages()
 {
-  echo "Packages: $(apk info | wc -l)"
+  echo "Packages: $(pacman -Q | wc -l)"
 }
 
 getvolume()

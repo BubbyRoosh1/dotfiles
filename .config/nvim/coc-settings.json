@@ -1,4 +1,5 @@
 {
+    "rust-analyzer.inlayHints.typeHints": false,
     "languageserver": {
         "kotlin": {
             "command": "$HOME/.local/src/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",

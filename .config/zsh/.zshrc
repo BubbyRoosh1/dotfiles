@@ -24,7 +24,7 @@ export KEYTIMEOUT=1
 
 export EDITOR=nvim
 
-alias vim=nvim
+#alias vim=nvim
 #gh completion --shell zsh
 #clear
 
