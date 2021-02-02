@@ -1,6 +1,0 @@
-#!/bin/sh
-if [ $1 == "up" ]; then
-  amixer set Master 5%+
-else
-  amixer set Master 5%-
-fi

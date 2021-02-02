@@ -23,6 +23,8 @@ bindkey -v
 export KEYTIMEOUT=1
 
 export EDITOR=nvim
+export PAGER="nvim -R"
+export MANPAGER="nvim -c 'set ft=man'"
 
 #alias vim=nvim
 #gh completion --shell zsh
@@ -94,4 +96,4 @@ bindkey '^e' edit-command-line
 #startx &
 #fi
 
-source $HOME/.local/bin/aliasmaker
+source $HOME/.local/scripts/aliasmaker

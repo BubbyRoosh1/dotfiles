@@ -1,3 +1,0 @@
-#!/bin/sh
-option=$(echo -e "suspend\npoweroff\nreboot" | dmenu -p Power)
-systemctl $option

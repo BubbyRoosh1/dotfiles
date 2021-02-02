@@ -27,7 +27,7 @@ call plug#end()
 
 let g:ale_linters = {'rust': ['analyzer']}
 
-let g:fern#drawer_width = 30
+let g:fern#drawer_width = 25
 let g:fern#default_hidden = 1
 let g:fern#disable_drawer_auto_quit = 1
 
@@ -43,7 +43,7 @@ function! s:init_fern() abort
 	nmap <buffer> T <Plug>(fern-action-new-file)
 	nmap <buffer> D <Plug>(fern-action-new-dir)
 	nmap <buffer> S <Plug>(fern-action-hidden-toggle)
-	nmap <buffer> dd <Plug>(fern-action-trash)
+	nmap <buffer> dd <Plug>(fern-action-remove)
   nmap <buffer> <leader> <Plug>(fern-action-mark)
 endfunction
 
