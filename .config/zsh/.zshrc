@@ -23,15 +23,11 @@ bindkey -v
 export KEYTIMEOUT=1
 
 export EDITOR=nvim
-export PAGER="nvim -R"
-export MANPAGER="nvim -c 'set ft=man'"
+#export PAGER="nvim -R"
+#export MANPAGER="nvim -c 'set ft=man'"
 
-#alias vim=nvim
-#gh completion --shell zsh
-#clear
+export RUA_SUDO_COMMAND=doas
 
-#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-#echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 # Paths
 export PATH=$HOME/.local/share:$PATH

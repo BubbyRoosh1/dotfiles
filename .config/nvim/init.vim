@@ -14,14 +14,14 @@ call plug#begin()
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 "Plug 'dense-analysis/ale'
-Plug 'justinmk/vim-sneak'
+"Plug 'justinmk/vim-sneak'
 Plug 'vim-airline/vim-airline'
-Plug 'udalov/kotlin-vim'
+"Plug 'udalov/kotlin-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-syntastic/syntastic'
 "Plug 'wellle/context.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'shapeoflambda/dark-purple.vim'
+"Plug 'shapeoflambda/dark-purple.vim'
 Plug 'lambdalisue/fern.vim'
 call plug#end()
 

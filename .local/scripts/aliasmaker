@@ -1,6 +1,6 @@
 #!/bin/sh
 
-input="$HOME/.config/bubby/aliases"
+input="$HOME/.config/aliases"
 
 while IFS= read -r line
 do
