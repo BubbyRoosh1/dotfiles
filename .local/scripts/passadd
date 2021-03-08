@@ -1,0 +1,5 @@
+#!/bin/sh
+
+name=$(echo "" | dmenu -p "Please enter your password:")
+pass generate $name -c
+notify-send "$name added to passwords and copied to clipboard!"

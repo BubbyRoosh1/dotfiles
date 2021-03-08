@@ -9,7 +9,8 @@ getdate()
 
 getpackages()
 {
-  echo "Packages: $(pacman -Q | wc -l)"
+  #echo "Packages: $(pacman -Q | wc -l)"
+  echo "Packages: $(ls -d /var/db/pkg/*/* | wc -l)"
 }
 
 getvolume()
