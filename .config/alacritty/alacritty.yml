@@ -696,7 +696,7 @@ key_bindings:
   - { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
   - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
   - { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
-
+  - { key: Return,              mods: Control|Shift, command: {program: "bash", args: ["-c", "~/.local/scripts/alacritty-newterm"]} }
   # (Windows only)
   #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
 
