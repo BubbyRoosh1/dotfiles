@@ -36,5 +36,4 @@ fi
 [ -f /etc/xprofile  ] && . /etc/xprofile
 [ -f ~/.xprofile  ] && . ~/.xprofile
 
-$HOME/.local/src/dwm-bar/dwm_bar.sh &
 exec dwm

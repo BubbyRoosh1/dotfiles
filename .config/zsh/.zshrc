@@ -6,11 +6,6 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
-# Load aliases and shortcuts if existent.
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc"
-
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -22,12 +17,11 @@ _comp_options+=(globdots)		# Include hidden files.
 bindkey -v
 export KEYTIMEOUT=1
 
-export EDITOR=nvim
-#export PAGER="nvim -R"
-#export MANPAGER="nvim -c 'set ft=man'"
+export EDITOR=vim
 
-export RUA_SUDO_COMMAND=doas
-
+alias xins="sudo xbps-install"
+alias xqry="xbps-query --regex -Rs"
+alias xrem="sudo xbps-remove"
 
 # Paths
 export PATH=$HOME/.local/share:$PATH

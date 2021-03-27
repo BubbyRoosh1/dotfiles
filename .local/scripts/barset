@@ -1,6 +1,6 @@
 #!/bin/sh
 
-barsep="  |  "
+barsep="]["
 
 getdate()
 {
@@ -9,8 +9,12 @@ getdate()
 
 getpackages()
 {
+  # Arch
   #echo "Packages: $(pacman -Q | wc -l)"
-  echo "Packages: $(ls -d /var/db/pkg/*/* | wc -l)"
+  # Gentoo
+  #echo "Packages: $(ls -d /var/db/pkg/*/* | wc -l)"
+  # Void
+  echo "Packages: $(xbps-query -l | wc -l)"
 }
 
 getvolume()
@@ -20,22 +24,22 @@ getvolume()
 
 getpower()
 {
-  power=$(upower -d | grep  percentage | awk 'FNR == 1 {print $2}')
-  charging=$(upower -d | grep state | awk 'FNR == 2 {print $2}')
-  if [ $charging = 'charging' ]; then
+  power=$(cat /sys/class/power_supply/BAT0/capacity)
+  charging=$(cat /sys/class/power_supply/BAT0/status)
+  if [ $charging = 'Charging' ]; then
     charge='^'
   else
     charge=''
   fi
-  echo "Battery: $power $charge"
+  echo "Battery: $power$charge"
 }
 
 hddspace()
 {
-  echo "Free space: $(df -h | grep /dev/sda3 | awk '{print $4}')"
+  echo "Free space: $(df -h | grep /dev/sda4 | awk '{print $4}')"
 }
 
 while true; do
-  xsetroot -name " $(getpackages)$barsep$(hddspace)$barsep$(getpower)$barsep$(getvolume)$barsep$(getdate)"
+  xsetroot -name "[$(getpackages)$barsep$(hddspace)$barsep$(getpower)$barsep$(getvolume)$barsep$(getdate)]"
   sleep 10s
 done &
