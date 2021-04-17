@@ -3,5 +3,5 @@
 $HOME/.fehbg
 $HOME/.local/scripts/barset &
 #$HOME/.local/scripts/msyn &
-xcompmgr &
+picom &
 xset r rate 300 50

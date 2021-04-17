@@ -14,7 +14,9 @@ getpackages()
   # Gentoo
   #echo "Packages: $(ls -d /var/db/pkg/*/* | wc -l)"
   # Void
-  echo "Packages: $(xbps-query -l | wc -l)"
+  #echo "Packages: $(xbps-query -l | wc -l)"
+  # Alpine
+  echo "Packages: $(apk stats | awk 'NR==2 {print $2}')"
 }
 
 getvolume()
@@ -36,7 +38,9 @@ getpower()
 
 hddspace()
 {
-  echo "Free space: $(df -h | grep /dev/sda4 | awk '{print $4}')"
+  #echo "Free space: $(df -h | grep /dev/sda4 | awk '{print $4}')"
+  # Alpine installer doesn't have an option for separate home partition :(
+  echo "Free space: $(df -h | grep /dev/sda3 | awk '{print $4}')"
 }
 
 while true; do
