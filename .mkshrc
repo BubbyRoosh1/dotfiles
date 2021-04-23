@@ -1,0 +1,30 @@
+# Moment
+PS1=$(echo -e "\0033[31m\u001b[1m")[$(echo -e "\0033[33m")'${USER:=$(id -un)}'"$(echo -e "\0033[32m")@$(echo -e "\033[34m")${HOSTNAME:=$(hostname -s)} $(echo -e "\033[35m")\${PWD/#'$HOME'/\~}$(echo -e "\033[00m")$(echo -e "\0033[31m\u001b[1m")]$(echo -e "\0033[37m\0033[22m")$ "
+
+# Vi mode
+set -o vi
+
+# Posix compliant or something
+set +o posix
+
+# Vertical cursor
+echo -ne "\e[5 q"
+
+# Stop ^s tty freeze
+stty stop undef
+
+export EDITOR=vim
+
+export $(dbus-launch)
+
+export PATH=$PATH:$HOME/.local/share
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/scripts
+export PATH=$PATH:$HOME/go/bin
+
+alias hm='cd ~'
+alias pc='cd ~/Projects/C'
+alias pj='cd ~/Projects/Java'
+alias pr='cd ~/Projects/Rust'
+alias pp='cd ~/Projects/Python'
+#source $HOME/.local/scripts/aliasmaker
